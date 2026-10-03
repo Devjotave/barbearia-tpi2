@@ -59,6 +59,16 @@
                     <input id="horario" name="horario" type="time" min="08:00" max="19:00" required>
                 </div>
 
+                <div class="campo">
+                    <label for="confirmacao">Forma de confirmação</label>
+                    <select id="confirmacao" name="confirmacao" required>
+                        <option value="">Selecione</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                        <option value="Telefone">Telefone</option>
+                        <option value="E-mail">E-mail</option>
+                    </select>
+                </div>
+
                 <div class="campo campo-largo">
                     <label for="observacoes">Observações</label>
                     <textarea id="observacoes" name="observacoes" rows="4" minlength="3" maxlength="300" required></textarea>
@@ -70,7 +80,6 @@
                 </div>
 
                 <div class="mensagem campo-largo" role="status" aria-live="polite"></div>
-        
             </tpi2>
         </form>
     </main>

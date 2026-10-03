@@ -12,9 +12,10 @@ $barbeiro = trim($_POST['barbeiro'] ?? '');
 $servico = trim($_POST['servico'] ?? '');
 $data = trim($_POST['data'] ?? '');
 $horario = trim($_POST['horario'] ?? '');
+$confirmacao = trim($_POST['confirmacao'] ?? '');
 $observacoes = trim($_POST['observacoes'] ?? '');
 
-if ($cliente === '' || $barbeiro === '' || $servico === '' || $data === '' || $horario === '' || $observacoes === '') {
+if ($cliente === '' || $barbeiro === '' || $servico === '' || $data === '' || $horario === '' || $confirmacao === '' || $observacoes === '') {
     http_response_code(422);
     echo json_encode(['sucesso' => false, 'mensagem' => 'Preencha todos os campos.']);
     exit;
@@ -23,6 +24,14 @@ if ($cliente === '' || $barbeiro === '' || $servico === '' || $data === '' || $h
 if (strlen($cliente) < 3 || strlen($observacoes) < 3) {
     http_response_code(422);
     echo json_encode(['sucesso' => false, 'mensagem' => 'Nome do cliente ou observações inválidas.']);
+    exit;
+}
+
+$formasConfirmacao = ['WhatsApp', 'Telefone', 'E-mail'];
+
+if (!in_array($confirmacao, $formasConfirmacao, true)) {
+    http_response_code(422);
+    echo json_encode(['sucesso' => false, 'mensagem' => 'Forma de confirmação inválida.']);
     exit;
 }
 
@@ -66,5 +75,5 @@ $quando = $diasAteAtendimento === 0 ? 'hoje' : "daqui a {$diasAteAtendimento} di
 
 echo json_encode([
     'sucesso' => true,
-    'mensagem' => "Agendamento recebido com sucesso para {$barbeiro}, serviço {$servico}, {$quando}."
+    'mensagem' => "Agendamento recebido com sucesso para {$barbeiro}, serviço {$servico}, {$quando}. Confirmação por {$confirmacao}."
 ]);
