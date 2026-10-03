@@ -22,42 +22,45 @@
         </div>
 
         <form class="formulario" data-endpoint="php/clientes.php">
-            <div class="campo campo-largo">
-                <label for="nome">Nome completo</label>
-                <input id="nome" name="nome" type="text" minlength="3" maxlength="100" required>
-            </div>
+            <tpi2>
+                <div class="campo campo-largo">
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" name="nome" type="text" minlength="3" maxlength="100" required>
+                </div>
 
-            <div class="campo">
-                <label for="cpf">CPF</label>
-                <input id="cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" data-mask="cpf" required>
-            </div>
+                <div class="campo">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" data-mask="cpf" required>
+                </div>
 
-            <div class="campo">
-                <label for="nascimento">Data de nascimento</label>
-                <input id="nascimento" name="nascimento" type="date" required>
-            </div>
+                <div class="campo">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input id="nascimento" name="nascimento" type="date" required>
+                </div>
 
-            <div class="campo">
-                <label for="telefone">Telefone</label>
-                <input id="telefone" name="telefone" type="tel" maxlength="15" placeholder="(34) 99999-9999" data-mask="telefone" required>
-            </div>
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" name="telefone" type="tel" maxlength="15" placeholder="(34) 99999-9999" data-mask="telefone" required>
+                </div>
 
-            <div class="campo">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" maxlength="120" required>
-            </div>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" maxlength="120" required>
+                </div>
 
-            <div class="campo campo-largo">
-                <label for="observacoes">Observações</label>
-                <textarea id="observacoes" name="observacoes" rows="4" minlength="3" maxlength="300" required></textarea>
-            </div>
+                <div class="campo campo-largo">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="4" minlength="3" maxlength="300" required></textarea>
+                </div>
 
-            <div class="acoes campo-largo">
-                <button class="botao" type="submit">Enviar cadastro</button>
-                <button class="botao botao-secundario" type="reset">Limpar</button>
-            </div>
+                <div class="acoes campo-largo">
+                    <button class="botao" type="submit">Enviar cadastro</button>
+                    <button class="botao botao-secundario" type="reset">Limpar</button>
+                </div>
 
-            <div class="mensagem campo-largo" role="status" aria-live="polite"></div>
+                <div class="mensagem campo-largo" role="status" aria-live="polite"></div>
+        
+            </tpi2>
         </form>
     </main>
 

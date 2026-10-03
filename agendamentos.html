@@ -22,53 +22,56 @@
         </div>
 
         <form class="formulario" data-endpoint="php/agendamentos.php">
-            <div class="campo campo-largo">
-                <label for="cliente">Nome do cliente</label>
-                <input id="cliente" name="cliente" type="text" minlength="3" maxlength="100" required>
-            </div>
+            <tpi2>
+                <div class="campo campo-largo">
+                    <label for="cliente">Nome do cliente</label>
+                    <input id="cliente" name="cliente" type="text" minlength="3" maxlength="100" required>
+                </div>
 
-            <div class="campo">
-                <label for="barbeiro">Barbeiro</label>
-                <select id="barbeiro" name="barbeiro" required>
-                    <option value="">Selecione</option>
-                    <option value="Rafael">Rafael</option>
-                    <option value="Lucas">Lucas</option>
-                    <option value="Matheus">Matheus</option>
-                </select>
-            </div>
+                <div class="campo">
+                    <label for="barbeiro">Barbeiro</label>
+                    <select id="barbeiro" name="barbeiro" required>
+                        <option value="">Selecione</option>
+                        <option value="Rafael">Rafael</option>
+                        <option value="Lucas">Lucas</option>
+                        <option value="Matheus">Matheus</option>
+                    </select>
+                </div>
 
-            <div class="campo">
-                <label for="servico">Serviço</label>
-                <select id="servico" name="servico" required>
-                    <option value="">Selecione</option>
-                    <option value="Corte">Corte</option>
-                    <option value="Barba">Barba</option>
-                    <option value="Corte e barba">Corte e barba</option>
-                    <option value="Tratamento capilar">Tratamento capilar</option>
-                </select>
-            </div>
+                <div class="campo">
+                    <label for="servico">Serviço</label>
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione</option>
+                        <option value="Corte">Corte</option>
+                        <option value="Barba">Barba</option>
+                        <option value="Corte e barba">Corte e barba</option>
+                        <option value="Tratamento capilar">Tratamento capilar</option>
+                    </select>
+                </div>
 
-            <div class="campo">
-                <label for="data">Data</label>
-                <input id="data" name="data" type="date" data-min-today required>
-            </div>
+                <div class="campo">
+                    <label for="data">Data</label>
+                    <input id="data" name="data" type="date" data-min-today required>
+                </div>
 
-            <div class="campo">
-                <label for="horario">Horário</label>
-                <input id="horario" name="horario" type="time" min="08:00" max="19:00" required>
-            </div>
+                <div class="campo">
+                    <label for="horario">Horário</label>
+                    <input id="horario" name="horario" type="time" min="08:00" max="19:00" required>
+                </div>
 
-            <div class="campo campo-largo">
-                <label for="observacoes">Observações</label>
-                <textarea id="observacoes" name="observacoes" rows="4" minlength="3" maxlength="300" required></textarea>
-            </div>
+                <div class="campo campo-largo">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" name="observacoes" rows="4" minlength="3" maxlength="300" required></textarea>
+                </div>
 
-            <div class="acoes campo-largo">
-                <button class="botao" type="submit">Enviar agendamento</button>
-                <button class="botao botao-secundario" type="reset">Limpar</button>
-            </div>
+                <div class="acoes campo-largo">
+                    <button class="botao" type="submit">Enviar agendamento</button>
+                    <button class="botao botao-secundario" type="reset">Limpar</button>
+                </div>
 
-            <div class="mensagem campo-largo" role="status" aria-live="polite"></div>
+                <div class="mensagem campo-largo" role="status" aria-live="polite"></div>
+        
+            </tpi2>
         </form>
     </main>
 
