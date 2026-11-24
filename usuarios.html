@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Usuários | Barbearia do Rafa</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-protected="true" data-admin-only="true" data-module="usuarios">
+<header class="barra-interna"><div class="container nav"><a class="logo" href="index.html">Barbearia do Rafa</a><div class="nav-acoes"><a href="index.html">Início</a><span data-user-name></span><button class="link-botao" type="button" data-logout>Sair</button></div></div></header>
+<main class="container formulario-pagina"><div class="titulo-secao"><p class="destaque">Autenticação</p><h1>Usuários</h1><p>CRUD dos usuários que podem realizar login no sistema.</p></div>
+<form class="formulario" data-endpoint="php/usuarios.php"><input type="hidden" name="id" id="id">
+<div class="campo campo-largo"><label for="nome">Nome completo</label><input id="nome" name="nome" type="text" minlength="3" maxlength="100" required></div>
+<div class="campo"><label for="email">E-mail</label><input id="email" name="email" type="email" maxlength="120" required></div>
+<div class="campo"><label for="senha">Senha</label><input id="senha" name="senha" type="password" minlength="6" maxlength="72" required><small>Obrigatória no cadastro. Na edição, deixe em branco para manter a senha atual.</small></div>
+<div class="campo"><label for="perfil">Perfil</label><select id="perfil" name="perfil" required><option>Administrador</option><option>Atendente</option></select></div>
+<div class="campo"><label for="ativo">Situação</label><select id="ativo" name="ativo" required><option value="1">Ativo</option><option value="0">Inativo</option></select></div>
+<div class="acoes campo-largo"><button class="botao" type="submit" data-submit-label>Salvar usuário</button><button class="botao botao-secundario" type="button" data-cancel-edit>Limpar</button></div><div class="mensagem campo-largo" role="status" aria-live="polite"></div></form>
+<section class="lista-secao"><div class="titulo-lista"><h2>Usuários cadastrados</h2><button class="botao botao-secundario" type="button" data-refresh>Atualizar lista</button></div><div class="tabela-wrap"><table><thead><tr><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Situação</th><th>Criado em</th><th>Ações</th></tr></thead><tbody id="listaRegistros"></tbody></table></div></section>
+</main><script src="js/common.js" defer></script><script src="js/app.js" defer></script></body></html>

@@ -1,0 +1,21 @@
+# Checklist de requisitos
+
+- [x] Continuidade do sistema do Momento I.
+- [x] Cinco formulários principais com pelo menos cinco campos.
+- [x] HTML separado do PHP.
+- [x] JavaScript/Fetch para envio das requisições.
+- [x] Validação no servidor e lógica adicional em cada módulo.
+- [x] Banco de dados MySQL/MariaDB integrado às telas.
+- [x] CRUD de clientes.
+- [x] CRUD de barbeiros.
+- [x] CRUD de serviços.
+- [x] CRUD de produtos.
+- [x] CRUD de agendamentos.
+- [x] CRUD de usuários.
+- [x] Login consultando usuários cadastrados no banco.
+- [x] Sessão PHP para armazenar o usuário autenticado.
+- [x] Script SQL completo de instalação.
+- [x] Usuário administrador inicial criado pelo script SQL.
+- [x] Caminhos relativos sem nome fixo da pasta em `htdocs`.
+- [x] Relatório do Momento II dentro da pasta do projeto.
+- [x] Pasta pronta para ser compactada como diretório completo.
