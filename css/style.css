@@ -75,6 +75,25 @@ small { color: var(--muted); }
 input, select, textarea { width: 100%; border: 1px solid #cfc7ba; border-radius: 9px; padding: 11px 12px; background: white; color: var(--texto); }
 input:focus, select:focus, textarea:focus { outline: 2px solid rgba(185,134,63,.25); border-color: var(--dourado); }
 textarea { resize: vertical; }
+
+.controle-senha {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: .9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.controle-senha input {
+    width: auto;
+    margin: 0;
+    accent-color: var(--dourado);
+}
+
 .acoes { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
 .mensagem { display: none; border-radius: 9px; padding: 12px 14px; font-weight: 700; }
 .mensagem.sucesso { display: block; background: var(--sucesso); color: #285d31; }

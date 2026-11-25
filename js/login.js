@@ -1,15 +1,28 @@
 const formLogin = document.getElementById('formLogin');
 const mensagemLogin = document.getElementById('mensagemLogin');
+const campoSenha = document.getElementById('senha');
+const mostrarSenha = document.getElementById('mostrarSenha');
 
 function mensagem(texto, tipo) {
     mensagemLogin.textContent = texto;
     mensagemLogin.className = `mensagem campo-largo ${tipo}`;
 }
 
+function configurarExibicaoSenha() {
+    if (!campoSenha || !mostrarSenha) {
+        return;
+    }
+
+    mostrarSenha.addEventListener('change', () => {
+        campoSenha.type = mostrarSenha.checked ? 'text' : 'password';
+    });
+}
+
 async function verificarLoginExistente() {
     try {
         const resposta = await fetch('php/sessao.php', { credentials: 'same-origin' });
         const retorno = await resposta.json();
+
         if (retorno.autenticado) {
             window.location.href = 'index.html';
         }
@@ -20,6 +33,7 @@ async function verificarLoginExistente() {
 
 formLogin.addEventListener('submit', async (evento) => {
     evento.preventDefault();
+
     if (!formLogin.checkValidity()) {
         formLogin.reportValidity();
         return;
@@ -35,6 +49,7 @@ formLogin.addEventListener('submit', async (evento) => {
             body: new FormData(formLogin),
             credentials: 'same-origin'
         });
+
         const retorno = await resposta.json();
 
         if (!resposta.ok || !retorno.sucesso) {
@@ -50,4 +65,5 @@ formLogin.addEventListener('submit', async (evento) => {
     }
 });
 
+configurarExibicaoSenha();
 verificarLoginExistente();
